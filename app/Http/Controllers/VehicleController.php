@@ -41,7 +41,7 @@ class VehicleController extends Controller implements HasMiddleware
     {
           $validator = Validator::make($request->all(), [
             'Name' => 'required|min:3',
-            'Brand' => 'required|min:3',
+            
             'Model' => 'required|min:3'
         ]);
         if ($validator->passes()) {
