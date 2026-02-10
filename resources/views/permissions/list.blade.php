@@ -38,10 +38,10 @@
                             </td>
                             <td class="px-6 py-3 text-center">
                                 @can('edit permissions')
-                                <a href="{{ route("permissions.edit", $permission->id) }}" class="bg-white-500 text-sm px-2 py-0 rounded-md text-black hover:bg-slate-500">Edit</a>
+                                <a href="{{ route("permissions.edit", $permission->id) }}" class="bg-blue-500 text-sm px-2 py-0 rounded-md text-white hover:bg-blue-600">Edit</a>
                                 @endcan
                                 @can('delete permissions')
-                                <a href="javascript:void(0);" onclick="deletePermission('{{ $permission->id }}')" class="bg-blue-500 text-sm px-2 py-0 rounded-md text-white hover:bg-slate-500" >Delete</a>
+                                <a href="javascript:void(0);" onclick="deletePermission('{{ $permission->id }}')" class="bg-red-500 text-sm px-2 py-0 rounded-md text-white hover:bg-red-600" >Delete</a>
                                 @endcan
                             </td>
                         </tr>
