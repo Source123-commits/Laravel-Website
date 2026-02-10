@@ -47,10 +47,10 @@
                             </td>
                             <td class="px-6 py-3 text-center">
                                 @can('edit users')
-                                <a href="{{ route("users.edit", $user->id)}}" class="bg-white-500 text-sm px-2 py-0 rounded-md text-black hover:bg-slate-500">Edit</a>
+                                <a href="{{ route("users.edit", $user->id)}}" class="bg-blue-500 text-sm px-2 py-0 rounded-md text-white hover:bg-slate-500">Edit</a>
                             @endcan
                             @can('delete users')
-                                 <a href="javascript:void(0);" onclick="deleteUser('{{ $user->id }}')" class="bg-blue-500 text-sm px-2 py-0 rounded-md text-white hover:bg-slate-500" >Delete</a> 
+                                 <a href="javascript:void(0);" onclick="deleteUser('{{ $user->id }}')" class="bg-red-500 text-sm px-2 py-0 rounded-md text-white hover:bg-red-600" >Delete</a> 
                         @endcan
 
                             </td>
