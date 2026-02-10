@@ -26,7 +26,7 @@ class VehicleController extends Controller implements HasMiddleware
     public function index()
     {
         
-        $vehicles = Vehicle::latest()->paginate(25);
+        $vehicles = Vehicle::orderBy('created_at', 'ASC')->paginate(25);
         return view('vehicles.list', [
             'vehicles' => $vehicles
         ]);
@@ -83,7 +83,6 @@ class VehicleController extends Controller implements HasMiddleware
              $vehicle = Vehicle::findOrFail($id);
             $validator = Validator::make($request->all(), [
                 'Name' => 'required|min:3',
-                'Brand' => 'required|min:3',
                 'Model' => 'required|min:3'
             ]);
             if ($validator->passes()) {
